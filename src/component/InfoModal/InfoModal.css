@@ -1,0 +1,34 @@
+.InfoForm {
+    position: absolute;
+    min-height: 20rem;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 3rem;
+    background: white;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.InfoForm > div {
+    width: 70%;
+}
+.modalInput {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: rgba(40, 52, 62, 0.07);
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+}
+.md-btn {
+    width: 6rem;
+    height: 2rem;
+    font-size: 1em;
+}

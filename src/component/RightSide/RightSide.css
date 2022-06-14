@@ -1,0 +1,18 @@
+.RightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.navIcon{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.td-btn {
+    height: 3rem;
+    width: 80%;
+    align-self: center;
+    font-size: 1.3em;
+}

@@ -1,0 +1,74 @@
+.Posting {
+    display: flex;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.64);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.Posting > img {
+    transition: 100ms ease-out;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+.Posting > img {
+    cursor: pointer;
+}
+
+.Posting > div {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 0.3rem;
+}
+
+.Posting > div > input {
+    background-color: rgba(40, 52, 62, 0.07);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+
+.post-option {
+    display: flex;
+    justify-content: space-around;
+}
+.option {
+    padding: 5px 10px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all 100ms ease-out;
+}
+
+.option:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.pt-btn {
+    padding: 5px 20px;
+    font-size: 12px;
+
+}
+
+.previewImage {
+    position: relative;
+}
+
+.previewImage > svg {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+
+.previewImage > img {
+    width: 100%;
+    max-height: 20rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
