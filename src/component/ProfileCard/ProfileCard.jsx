@@ -2,7 +2,7 @@ import React from 'react'
 import Thumb from '../../img/thumb.jpg'
 import Avatar from '../../img/avatar.jpg'
 import './ProfileCard.css'
-import { Link } from "react-router-dom";
+
 const ProfileCard = () => {
 
   return (
@@ -33,9 +33,7 @@ const ProfileCard = () => {
             </div>            
             <hr />
         </div>
-        <Link to='/profile'>
             <span className='user-name'> My Profile</span>
-        </Link>
          
     </div>
   )

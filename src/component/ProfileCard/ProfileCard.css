@@ -76,7 +76,7 @@
     height: 150%;
     border-left: 2px solid #cfcdcd;
 }
-.ProfileCard > a {
+.ProfileCard > span {
     align-self:center;
     color: orange;
     font-weight: bold;

@@ -30,7 +30,10 @@
     background: transparent;
     border: 2px solid #7DC087;
 }
-
+.button:disabled {
+    background: silver;
+    pointer-events: none;
+}
 ::-webkit-scrollbar {
     display: none;
 }

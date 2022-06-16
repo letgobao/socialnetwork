@@ -12,10 +12,15 @@
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 2rem;
+    border: none;
+    outline: none;
 }
 
 .InfoForm > div {
-    width: 70%;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
 }
 .modalInput {
     width: 100%;
@@ -31,4 +36,12 @@
     width: 6rem;
     height: 2rem;
     font-size: 1em;
+}
+.update-option {
+    display: flex;
+    align-items: center;
+}
+.update-option:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }

@@ -6,7 +6,6 @@ import RoomIcon from '@material-ui/icons/Room';
 import SchoolIcon from '@material-ui/icons/School';
 import RssFeedIcon from '@material-ui/icons/RssFeed';
 import InfoModal from '../InfoModal/InfoModal';
-import { Link } from "react-router-dom";
 const InfoCard = () => {
   const [openModal,setOpenModal] = useState(false)
   const [useInfo, setUserInfo] = useState({
@@ -25,28 +24,26 @@ const InfoCard = () => {
         <div className="info">
             <FavoriteIcon/>
             <span>
-                <b>Status: </b>{useInfo.Status}
+                <b>Status: </b>Single
             </span>
         </div>
         <div className="info">
             <RoomIcon/>
             <span>
-                <b>Lives in: </b>{useInfo.Lives}
+                <b>Lives in: </b>Ha Noi, Viet Nam
             </span>
         </div>
         <div className="info">
             <SchoolIcon/>
             <span>
-                <b>Studies at: </b>{useInfo.School}
+                <b>Studies at: </b>Hanoi University of Science and Technology
             </span>
         </div>
         <div className="info">
             <RssFeedIcon/>
-            <span>Has <b>{useInfo.followers} followers</b></span>
+            <span>Has <b>200 followers</b></span>
         </div>
-        <Link to='/'>
             <button className='button lo-btn'>Log out</button>
-        </Link>
        
     </div>
   )

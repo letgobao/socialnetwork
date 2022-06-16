@@ -1,20 +1,11 @@
-import React,{useState} from 'react'
+import React,{useRef} from 'react'
 import Modal from '@material-ui/core/Modal';
+import AccountBoxOutlinedIcon from '@material-ui/icons/AccountBoxOutlined';
+import PhotoLibraryOutlinedIcon from '@material-ui/icons/PhotoLibraryOutlined';
 import './InfoModal.css'
-const InfoModal = ({open,closeModal,updateInfo,info}) => {
-    const [status,setStatus] = useState(info.Status)
-    const [lives,setLives] = useState(info.Lives)
-    const [studies,setStudies] = useState(info.School)
-    const handleUpdate = () => {
-        console.log(status)
-        updateInfo({
-            Status: status,
-            Lives: lives,
-            School: studies,
-            followers: info.followers
-        })
-        handleClose(false)
-    }
+const InfoModal = ({open,closeModal}) => {
+    const avatarRef = useRef()
+    const thumbRef = useRef()
     const handleClose = () => {
         closeModal(false)
     }
@@ -29,15 +20,31 @@ const InfoModal = ({open,closeModal,updateInfo,info}) => {
           <form className="InfoForm">
             <h3>Your Information</h3>
             <div>
-                <input type="text" className="modalInput" placeholder='Status' name='status' onChange={(e)=>setStatus(e.target.value)}/>
+                <input type="text" className="modalInput" placeholder='Status' name='status' />
             </div>
             <div>
-                <input type="text" className="modalInput" placeholder='Lives in' name='livesin' onChange={(e)=>setLives(e.target.value)}/>
+                <input type="text" className="modalInput" placeholder='Lives in' name='livesin' />
             </div>
             <div>
-                <input type="text" className="modalInput" placeholder='Study at' name='studyat' onChange={(e)=>setStudies(e.target.value)}/>
+                <input type="text" className="modalInput" placeholder='Study at' name='studyat' />
             </div>
-            <button className="button md-btn" onClick={handleUpdate}>Save</button>
+            <div>
+              <div className="update-option" style={{color: '#DC004E'}} onClick={()=>avatarRef.current.click()}>
+                      <AccountBoxOutlinedIcon fontSize='large'/>
+                      Avatar
+              </div>
+              <div className="update-option" style={{color: '#4CB256'}} onClick={()=>thumbRef.current.click()}>
+                      <PhotoLibraryOutlinedIcon fontSize='large'/>
+                      Cover Background
+              </div>
+            </div>
+            <div style={{display:'none'}}>
+              Profile Image
+              <input type="file" name='avatarImg' ref={avatarRef}/>
+              Cover Image
+              <input type="file" name='thumbImg' ref={thumbRef}/>
+            </div>
+            <button className="button md-btn">Save</button>
           </form>
       </Modal>
     </div>
